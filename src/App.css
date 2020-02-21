@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background: rgb(58, 214, 175);
+  min-height: 100vh;
 }
 
 
@@ -17,4 +19,3 @@
 .App-link {
   color: #61dafb;
 }
-

@@ -1,12 +1,16 @@
-import React from 'react'
-
-const InputForm = () => {
-        return (
-            <div>
-                Hello I am an Input_Form!!!!
-            </div>
-        )
-    
-}
+import React from "react";
+import './InputForm.css';
+const InputForm = props => {
+  return (
+    <form onSubmit={props.getRecipe} className="inputForm">
+      <input className="input"
+        type="text"
+        name="recipeName"
+        placeholder="Type down a recipe...."
+      ></input>
+      <button className="searchButton" type="submit">Search Recipes</button>
+    </form>
+  );
+};
 
 export default InputForm;

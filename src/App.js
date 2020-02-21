@@ -1,8 +1,26 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import InputForm from './Components/InputForm/InputForm';
 
-function App() {
+class App extends Component {
+
+  state ={
+
+    recipes: []
+
+  }
+
+  getRecipe = (e) =>{
+
+    //Food2FORK API GOT DEPRECATED :(
+
+    e.preventDefault();
+    const recipe = e.target.elements.recipeName.value;
+    console.log(recipe);
+
+  }
+
+  render(){
   return (
     <div className="App">
       <header className="App-header">
@@ -10,9 +28,10 @@ function App() {
          Recipe Search
         </p>
       </header>
-      <InputForm></InputForm>
-    </div>
+      <InputForm getRecipe={this.getRecipe}></InputForm>
+      </div>
   );
+}
 }
 
 export default App;
